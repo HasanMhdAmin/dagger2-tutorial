@@ -7,7 +7,7 @@ import javax.inject.Inject;
 public class Farm {
     private static final String TAG = "Farm";
 
-//    @Inject
+    @Inject
     public Farm() {
         Log.d(TAG, "OCC Farm: ");
     }

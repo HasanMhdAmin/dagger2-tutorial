@@ -7,7 +7,7 @@ import javax.inject.Inject;
 public class River {
     private static final String TAG = "River";
 
-//    @Inject
+    @Inject
     public River() {
         Log.d(TAG, "OCC River: ");
     }
