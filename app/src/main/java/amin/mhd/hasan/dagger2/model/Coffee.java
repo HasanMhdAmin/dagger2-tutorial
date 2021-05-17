@@ -9,6 +9,8 @@ public class Coffee {
     private static final String TAG = "Coffee";
     @Inject
     Farm farm;
+
+    //TODO 1.0: let'S assume River is a class related to lib or SDK
     @Inject
     River river;
 
@@ -23,6 +25,7 @@ public class Coffee {
         return result;
     }
 
+    @Inject
     public String connectElectricity() {
         Log.d(TAG, "OCC connectElectricity: ");
         return "connecting ...";
