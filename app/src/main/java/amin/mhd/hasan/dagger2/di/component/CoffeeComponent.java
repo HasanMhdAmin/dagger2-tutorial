@@ -8,7 +8,5 @@ import dagger.Component;
 public interface CoffeeComponent {
     Coffee getCoffee();
 
-
-    // TODO: 1.2 field injection.
     void inject(MainActivity mainActivity);
 }

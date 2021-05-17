@@ -7,19 +7,14 @@ import javax.inject.Inject;
 public class Coffee {
 
     private static final String TAG = "Coffee";
-//    @Inject
-    private Farm farm;
-//    @Inject
-    private River river;
-
-
-    //TODO: 1. We will use field Injection (Why we need it? (e.g. in activity))
+    @Inject
+    Farm farm;
+    @Inject
+    River river;
 
     @Inject
-    public Coffee(Farm farm, River river) {
+    public Coffee() {
         Log.d(TAG, "OCC Coffee: ");
-        this.farm = farm;
-        this.river = river;
     }
 
     public String getCoffeeCup() {
@@ -28,11 +23,8 @@ public class Coffee {
         return result;
     }
 
-
-    //TODO: 2. method injection
-//    @Inject
-//    public String connectElectricity() {
-//        Log.d(TAG, "OCC connectElectricity: ");
-//        return "connecting ...";
-//    }
+    public String connectElectricity() {
+        Log.d(TAG, "OCC connectElectricity: ");
+        return "connecting ...";
+    }
 }
