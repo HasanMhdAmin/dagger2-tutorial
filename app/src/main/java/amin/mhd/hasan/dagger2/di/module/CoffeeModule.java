@@ -7,13 +7,11 @@ import dagger.Provides;
 @Module
 public class CoffeeModule {
 
+    int sugar;
 
-    // TODO: 2.1 make (int sugar) parameter and (constructor) and change (provideSugar)
-//    int sugar;
-//
-//    public CoffeeModule(int sugar) {
-//        this.sugar = sugar;
-//    }
+    public CoffeeModule(int sugar) {
+        this.sugar = sugar;
+    }
 
     @Provides
     River provideRiver() {
@@ -21,9 +19,8 @@ public class CoffeeModule {
     }
 
 
-    // TODO: 1.2 tell Dagger how to provide int
-//    @Provides
-//    int provideSugar() {
-//        return sugar;
-//    }
+    @Provides
+    int provideSugar() {
+        return sugar;
+    }
 }

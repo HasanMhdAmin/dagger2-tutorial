@@ -22,12 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CoffeeComponent coffeeComponent = DaggerCoffeeComponent.create();
-        // TODO: 2.2 make int sugar parameter and constructor
-//        CoffeeComponent coffeeComponent = DaggerCoffeeComponent
-//                .builder()
-//                .coffeeModule(new CoffeeModule(3))
-//                .build();
+        CoffeeComponent coffeeComponent = DaggerCoffeeComponent
+                .builder()
+                .coffeeModule(new CoffeeModule(3))
+                .build();
 
         coffeeComponent.inject(this);
         coffee.getCoffeeCup();
