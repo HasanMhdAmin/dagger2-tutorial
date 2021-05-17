@@ -10,7 +10,6 @@ public class Coffee {
     @Inject
     Farm farm;
 
-    //TODO 1.0: let'S assume River is a class related to lib or SDK
     @Inject
     River river;
 

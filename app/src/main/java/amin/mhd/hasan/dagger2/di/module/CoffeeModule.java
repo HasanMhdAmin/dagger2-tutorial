@@ -6,9 +6,7 @@ import dagger.Provides;
 
 @Module
 public class CoffeeModule {
-
-    //TODO 1.2: we tell Dagger how to create a new instance from River
-
+    
     @Provides
     River provideRiver() {
         return new River();
