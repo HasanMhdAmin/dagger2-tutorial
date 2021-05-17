@@ -6,6 +6,7 @@ import dagger.Provides;
 
 @Module
 public class CoffeeModule {
+    // TODO 1.2 remove sugar with provider and constructor
 
     int sugar;
 
@@ -23,4 +24,5 @@ public class CoffeeModule {
     int provideSugar() {
         return sugar;
     }
+
 }

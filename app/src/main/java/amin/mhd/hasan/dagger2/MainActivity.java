@@ -27,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
                 .coffeeModule(new CoffeeModule(3))
                 .build();
 
+
+        // TODO: 1.1 better way to write builder
+//        CoffeeComponent coffeeComponent = DaggerCoffeeComponent
+//                .builder()
+//                .sugar(2)
+//                .milk(5)
+//                .build();
+
+        // TODO 2.4 run and test!! not working!
+
         coffeeComponent.inject(this);
         coffee.getCoffeeCup();
 
