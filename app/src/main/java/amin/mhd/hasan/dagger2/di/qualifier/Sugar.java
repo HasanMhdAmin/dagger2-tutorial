@@ -14,6 +14,3 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 public @interface Sugar {
     String value() default "sugar";
 }
-
-
-// TODO 2.5 create Qualifier

@@ -1,5 +1,7 @@
 package amin.mhd.hasan.dagger2.di.component;
 
+import javax.inject.Singleton;
+
 import amin.mhd.hasan.dagger2.MainActivity;
 import amin.mhd.hasan.dagger2.di.module.CoffeeModule;
 import amin.mhd.hasan.dagger2.di.qualifier.Milk;
@@ -14,28 +16,17 @@ public interface CoffeeComponent {
 
     void inject(MainActivity mainActivity);
 
-    // TODO 1.3 create a builder
+    @Component.Builder
+    interface Builder {
 
-//    @Component.Builder
-//    interface Builder {
-//
-//        @BindsInstance
-//        Builder sugar(
-//                @Sugar
-//                        int sugar);
-//
-//        CoffeeComponent build();
-//
-//
-//        // TODO 2.3 add milk builder
-//        @BindsInstance
-//        Builder milk(
-//                @Milk
-//                        int milk);
-//
-//
-//        // TODO 2.8 Update Qualifier
-//
-//    }
+        @BindsInstance
+        Builder sugar(@Sugar int sugar);
+
+        CoffeeComponent build();
+
+        @BindsInstance
+        Builder milk(@Milk int milk);
+
+    }
 
 }

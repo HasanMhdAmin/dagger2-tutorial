@@ -13,5 +13,3 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 public @interface Milk {
     String value() default "milk";
 }
-
-// TODO 2.6 create Qualifier

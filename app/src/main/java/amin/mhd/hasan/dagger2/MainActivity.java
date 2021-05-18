@@ -1,6 +1,7 @@
 package amin.mhd.hasan.dagger2;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,35 +11,32 @@ import amin.mhd.hasan.dagger2.di.component.CoffeeComponent;
 import amin.mhd.hasan.dagger2.di.component.DaggerCoffeeComponent;
 import amin.mhd.hasan.dagger2.di.module.CoffeeModule;
 import amin.mhd.hasan.dagger2.model.Coffee;
+import amin.mhd.hasan.dagger2.model.River;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "OCC";
+
     @Inject
-    Coffee coffee;
+    Coffee coffee1;
+
+    CoffeeComponent coffeeComponent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CoffeeComponent coffeeComponent = DaggerCoffeeComponent
+        coffeeComponent = DaggerCoffeeComponent
                 .builder()
-                .coffeeModule(new CoffeeModule(3))
+                .sugar(2)
+                .milk(5)
                 .build();
 
-
-        // TODO: 1.1 better way to write builder
-//        CoffeeComponent coffeeComponent = DaggerCoffeeComponent
-//                .builder()
-//                .sugar(2)
-//                .milk(5)
-//                .build();
-
-        // TODO 2.4 run and test!! not working!
-
         coffeeComponent.inject(this);
-        coffee.getCoffeeCup();
+        coffee1.getCoffeeCup();
+
 
     }
 }
