@@ -10,6 +10,8 @@ import amin.mhd.hasan.dagger2.model.Coffee;
 import dagger.BindsInstance;
 import dagger.Component;
 
+// TODO 1.2 add @Singleton
+//@Singleton
 @Component(modules = CoffeeModule.class)
 public interface CoffeeComponent {
     Coffee getCoffee();

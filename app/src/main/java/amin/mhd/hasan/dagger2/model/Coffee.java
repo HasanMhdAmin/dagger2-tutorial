@@ -3,15 +3,18 @@ package amin.mhd.hasan.dagger2.model;
 import android.util.Log;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import amin.mhd.hasan.dagger2.di.qualifier.Milk;
 import amin.mhd.hasan.dagger2.di.qualifier.Sugar;
 
+// TODO 1.3 let's make coffee also singleton (optional)
+//@Singleton
 public class Coffee {
 
     private static final String TAG = "Coffee";
     @Inject
-    Farm farm;
+    public Farm farm;
 
     @Inject
     River river;
